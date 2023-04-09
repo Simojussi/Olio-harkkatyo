@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFF33"
     tools:context=".MainActivity">
 
     <TextView
@@ -21,5 +22,57 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnToHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="#AFAFAF"
+        android:onClick="toHome"
+        android:text="Lisää uusi Lutemoni"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLutemonFighter" />
+
+    <Button
+        android:id="@+id/btnToList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#AFAFAF"
+        android:onClick="toLutemonList"
+        android:text="Listaa Lutemonit"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/btnToHome"
+        app:layout_constraintStart_toStartOf="@+id/btnToHome"
+        app:layout_constraintTop_toBottomOf="@+id/btnToHome" />
+
+    <Button
+        android:id="@+id/btnToTrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#AFAFAF"
+        android:onClick="toTraining"
+        android:text="Treenaamaan"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/btnToList"
+        app:layout_constraintStart_toStartOf="@+id/btnToList"
+        app:layout_constraintTop_toBottomOf="@+id/btnToList" />
+
+    <Button
+        android:id="@+id/btnToBattle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#AFAFAF"
+        android:onClick="toBattle"
+        android:text="Taistelukentälle"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/btnToTrain"
+        app:layout_constraintStart_toStartOf="@+id/btnToTrain"
+        app:layout_constraintTop_toBottomOf="@+id/btnToTrain" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
