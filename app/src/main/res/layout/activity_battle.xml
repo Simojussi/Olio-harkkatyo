@@ -4,6 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFF33"
     tools:context=".BattleActivity">
 
+    <TextView
+        android:id="@+id/tvBattleField"
+        android:layout_width="414dp"
+        android:layout_height="70dp"
+        android:background="#FF5F1F"
+        android:gravity="center"
+        android:text="Taistelukenttä"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvChooseLutemon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Valitse taisteleva Lutemonisi:"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBattleField" />
+
+    <RadioGroup
+        android:id="@+id/rgChooseLutemon"
+        android:layout_width="167dp"
+        android:layout_height="238dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChooseLutemon">
+
+        <RadioButton
+            android:id="@+id/rbWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Valkoinen" />
+
+        <RadioButton
+            android:id="@+id/rbGreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vihreä" />
+
+        <RadioButton
+            android:id="@+id/rbPink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pinkki" />
+
+        <RadioButton
+            android:id="@+id/rbOrange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oranssi" />
+
+        <RadioButton
+            android:id="@+id/rbBlack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Musta" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnStartBattle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="#AFAFAF"
+        android:text="Taisteluun"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBattleField" />
+
+    <TextView
+        android:id="@+id/tvBattleText"
+        android:layout_width="365dp"
+        android:layout_height="323dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgChooseLutemon" />
 </androidx.constraintlayout.widget.ConstraintLayout>

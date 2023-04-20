@@ -8,11 +8,11 @@ public class Lutemon extends Storage {
     protected int experience;
     protected int health;
     protected int maxHealth;
-    protected int id;
+    protected double id;
     private int idCounter;
     protected int image;
 
-    public Lutemon(String name, String color, int attack, int defense, int experience, int health, int maxHealth, int id, int idCounter, int image) {
+    public Lutemon(String name, String color, int attack, int defense, int experience, int health, int maxHealth/*, int image*/) {
         this.name = name;
         this.color = color;
         this.attack = attack;
@@ -20,9 +20,10 @@ public class Lutemon extends Storage {
         this.experience = experience;
         this.health = health;
         this.maxHealth = maxHealth;
-        this.id = id;
-        this.idCounter = idCounter;
-        this.image = image;
+        id = Math.random()*1000+100;
+        int i = 0;
+        idCounter = i++;
+        //this.image = image;  TODO kuvat
     }
 
     public int Attack() {
@@ -62,7 +63,7 @@ public class Lutemon extends Storage {
         return maxHealth;
     }
 
-    public int getId() {
+    public double getId() {
         return id;
     }
 

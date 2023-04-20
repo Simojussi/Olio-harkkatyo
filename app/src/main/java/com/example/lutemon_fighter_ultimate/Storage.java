@@ -4,7 +4,12 @@ import java.util.ArrayList;
 
 public class Storage {
     protected String name;
-    protected ArrayList<Storage> lutemons = new ArrayList<>();
+    protected ArrayList<Lutemon> lutemons = new ArrayList<>();
+
+
+
+
+
 
 
 
