@@ -1,6 +1,6 @@
 package com.example.lutemon_fighter_ultimate;
 
-public class Lutemon extends Storage {
+public class Lutemon {
     protected String name;
     protected String color;
     protected int attack;
