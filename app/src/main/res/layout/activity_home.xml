@@ -64,13 +64,14 @@
     </RadioGroup>
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/txtLutemonName"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="30dp"
         android:background="#AFAFAF"
         android:ems="10"
+        android:gravity="center_horizontal"
         android:hint="Lutemonin nimi"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/btnAddNew"
@@ -90,5 +91,5 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/txtLutemonName" />
 </androidx.constraintlayout.widget.ConstraintLayout>
