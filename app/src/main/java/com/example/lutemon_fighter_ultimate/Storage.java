@@ -21,4 +21,8 @@ public class Storage {
     public ArrayList<Lutemon> getLutemons() {
         return lutemons;
     }
+
+    public void addLutemon(Lutemon lutemon) {
+        lutemons.add(lutemon);
+    }
 }
