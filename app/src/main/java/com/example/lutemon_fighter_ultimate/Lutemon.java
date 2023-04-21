@@ -1,5 +1,7 @@
 package com.example.lutemon_fighter_ultimate;
 
+import java.util.ArrayList;
+
 public class Lutemon {
     protected String name;
     protected String color;
@@ -33,6 +35,18 @@ public class Lutemon {
 
     public void Defense() {
 
+    }
+
+    public Lutemon getLutemonById(int id){
+        ArrayList<Lutemon> lutemons = Storage.getInstance().getLutemons();
+        Lutemon lutemon;
+        for (Lutemon l : lutemons) {
+            if (l.getId() == id){
+                lutemon = l;
+                break;
+            }
+        }
+        return lutemon;
     }
 
     public String getName() {
