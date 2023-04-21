@@ -39,27 +39,27 @@ public class HomeActivity extends AppCompatActivity {
 
         switch (rgLutemonColors.getCheckedRadioButtonId()) {
             case R.id.rbAddWhite:
-                Lutemon white = new White(txtLutemonName.toString());
+                Lutemon white = new White(txtLutemonName.getText().toString());
                 Storage.getInstance().addLutemon(white);
                 break;
 
             case R.id.rbAddGreen:
-                Lutemon green = new Green(txtLutemonName.toString());
+                Lutemon green = new Green(txtLutemonName.getText().toString());
                 Storage.getInstance().addLutemon(green);
                 break;
 
             case R.id.rbAddPink:
-                Lutemon pink = new Pink(txtLutemonName.toString());
+                Lutemon pink = new Pink(txtLutemonName.getText().toString());
                 Storage.getInstance().addLutemon(pink);
                 break;
 
             case R.id.rbAddOrange:
-                Lutemon orange = new Orange(txtLutemonName.toString());
+                Lutemon orange = new Orange(txtLutemonName.getText().toString());
                 Storage.getInstance().addLutemon(orange);
                 break;
 
             case R.id.rbAddBlack:
-                Lutemon black = new Black(txtLutemonName.toString());
+                Lutemon black = new Black(txtLutemonName.getText().toString());
                 Storage.getInstance().addLutemon(black);
                 break;
 

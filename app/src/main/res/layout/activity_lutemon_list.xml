@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFF33"
     android:textAlignment="viewStart"
     tools:context=".LutemonListActivity">
 
     <TextView
         android:id="@+id/tvLutemonList"
-        android:layout_width="417dp"
+        android:layout_width="0dp"
         android:layout_height="67dp"
+        android:layout_marginTop="16dp"
         android:background="#FF5F1F"
         android:gravity="center_horizontal|center_vertical"
         android:text="Lutemonisi"
@@ -25,15 +27,16 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvList"
-        android:layout_width="411dp"
-        android:layout_height="668dp"
+        android:layout_width="0dp"
+        android:layout_height="649dp"
+        android:layout_marginLeft="30dp"
         android:background="#FFFF33"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLutemonList"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
     </androidx.recyclerview.widget.RecyclerView>
 </androidx.constraintlayout.widget.ConstraintLayout>
