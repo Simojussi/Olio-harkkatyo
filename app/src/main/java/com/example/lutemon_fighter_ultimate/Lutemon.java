@@ -56,6 +56,10 @@ public class Lutemon {
         return lutemon;
     }
 
+    public void trainLutemon(int exp){
+        this.experience = experience + exp;
+    }
+
     public String getName() {
         return name;
     }

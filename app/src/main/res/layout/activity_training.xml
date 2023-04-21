@@ -4,6 +4,143 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFF33"
     tools:context=".TrainingActivity">
+
+    <TextView
+        android:id="@+id/tvTrainingField"
+        android:layout_width="414dp"
+        android:layout_height="70dp"
+        android:background="#FF5F1F"
+        android:gravity="center"
+        android:text="Treenialue"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvChooseTrainingMethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Valitse treenitapa:"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.751"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChooseLutemon2" />
+
+    <TextView
+        android:id="@+id/tvChooseLutemon2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Valitse treenattava Lutemonisi:"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTrainingField" />
+
+    <RadioGroup
+        android:id="@+id/rgChooseLutemon"
+        android:layout_width="167dp"
+        android:layout_height="238dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChooseLutemon2">
+
+        <RadioButton
+            android:id="@+id/rbWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Valkoinen" />
+
+        <RadioButton
+            android:id="@+id/rbGreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vihreä" />
+
+        <RadioButton
+            android:id="@+id/rbPink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pinkki" />
+
+        <RadioButton
+            android:id="@+id/rbOrange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oranssi" />
+
+        <RadioButton
+            android:id="@+id/rbBlack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Musta" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rgChooseTrainingMethod"
+        android:layout_width="167dp"
+        android:layout_height="238dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChooseTrainingMethod">
+
+        <RadioButton
+            android:id="@+id/rbRunning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Juoksulenkki (5sec)" />
+
+        <RadioButton
+            android:id="@+id/rbParkour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Parkour (7sec)" />
+
+        <RadioButton
+            android:id="@+id/rbBenchPress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Penkkipunnerrus (10sec)" />
+
+        <RadioButton
+            android:id="@+id/rbSquating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kyykky (15sec)" />
+
+        <RadioButton
+            android:id="@+id/rbBoxing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nyrkkeily (20sec)" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnTrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#AFAFAF"
+        android:onClick="trainLutemon"
+        android:text="Treenaa"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgChooseTrainingMethod" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
