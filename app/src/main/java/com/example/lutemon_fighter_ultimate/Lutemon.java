@@ -26,10 +26,10 @@ public class Lutemon {
         //this.image = image;  TODO kuvat
     }
 
-    public int Attack() {
+    /*public int Attack() {
         attack = lutemons.;
         return attack;
-    }
+    }*/
 
     public void Defense() {
 
