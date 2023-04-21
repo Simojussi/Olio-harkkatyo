@@ -28,16 +28,23 @@ public class Lutemon {
         //this.image = image;  TODO kuvat
     }
 
-    /*public int Attack() {
-        attack = lutemons.;
+    public int Attack(double id) {
+        Lutemon lutemon = getLutemonById(id);
+        int a = lutemon.getAttack();
+        int e = lutemon.getExperience();
+        int attack = a + e;
         return attack;
-    }*/
-
-    public void Defense() {
-
     }
 
-    public Lutemon getLutemonById(int id){
+    public int Defense(double id) {
+        Lutemon lutemon = getLutemonById(id);
+        int d = lutemon.getDefense();
+        int e = lutemon.getExperience();
+        int defence = d + e;
+        return defence;
+    }
+
+    public Lutemon getLutemonById(double id){
         ArrayList<Lutemon> lutemons = Storage.getInstance().getLutemons();
         Lutemon lutemon = null;
         for (Lutemon l : lutemons) {
