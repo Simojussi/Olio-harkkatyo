@@ -29,10 +29,11 @@ public class BattleActivity extends AppCompatActivity {
 
     public Lutemon chooseLutemon(){
 
+        ArrayList<Lutemon> lutemonsBattleList = new ArrayList<>();
+        lutemonsBattleList = s.getLutemons();
 
         switch (rg.getCheckedRadioButtonId()){
-            ArrayList<Lutemon> lutemonsBattleList = new ArrayList<>();
-            lutemonsBattleList = s.getLutemons();
+
 
             case R.id.rbWhite:
 
@@ -79,6 +80,8 @@ public class BattleActivity extends AppCompatActivity {
                     }
                 }
                 break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + rg.getCheckedRadioButtonId());
 
         }
         return battlingLutemon;

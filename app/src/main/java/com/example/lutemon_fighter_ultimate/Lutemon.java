@@ -39,7 +39,7 @@ public class Lutemon {
 
     public Lutemon getLutemonById(int id){
         ArrayList<Lutemon> lutemons = Storage.getInstance().getLutemons();
-        Lutemon lutemon;
+        Lutemon lutemon = null;
         for (Lutemon l : lutemons) {
             if (l.getId() == id){
                 lutemon = l;

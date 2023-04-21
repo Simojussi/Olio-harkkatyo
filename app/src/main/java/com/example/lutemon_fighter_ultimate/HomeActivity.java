@@ -61,6 +61,7 @@ public class HomeActivity extends AppCompatActivity {
             case R.id.rbAddBlack:
                 Lutemon black = new Black(txtLutemonName.toString());
                 Storage.getInstance().addLutemon(black);
+                break;
 
             default:
                 throw new IllegalStateException("Unexpected value: " + rgLutemonColors.getCheckedRadioButtonId());
