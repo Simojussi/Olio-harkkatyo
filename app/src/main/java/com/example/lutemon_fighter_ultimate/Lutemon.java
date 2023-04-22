@@ -14,7 +14,7 @@ public class Lutemon {
     private int idCounter;
     protected int image;
 
-    public Lutemon(String name, String color, int attack, int defense, int experience, int health, int maxHealth/*, int image */) {
+    public Lutemon(String name, String color, int attack, int defense, int experience, int health, int maxHealth, int image ) {
         this.name = name;
         this.color = color;
         this.attack = attack;
@@ -25,7 +25,7 @@ public class Lutemon {
         id = Math.random()*1000+100;
         int i = 0;
         idCounter = i++;
-        //image = R.id.imageLutemon1; TODO lisää kuvat
+        this.image = image;
     }
 
     public int Attack(double id) {
