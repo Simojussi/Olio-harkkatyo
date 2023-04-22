@@ -13,8 +13,10 @@ public class Lutemon {
     protected double id;
     private int idCounter;
     protected int image;
+    protected int wins;
+    protected int loses;
 
-    public Lutemon(String name, String color, int attack, int defense, int experience, int health, int maxHealth, int image ) {
+    public Lutemon(String name, String color, int attack, int defense, int experience, int health, int maxHealth, int image, int wins, int loses) {
         this.name = name;
         this.color = color;
         this.attack = attack;
@@ -26,6 +28,8 @@ public class Lutemon {
         int i = 0;
         idCounter = i++;
         this.image = image;
+        this.wins = wins;
+        this.loses = loses;
     }
 
     public int Attack(double id) {
@@ -34,6 +38,22 @@ public class Lutemon {
         int e = lutemon.getExperience();
         int attack = a + e;
         return attack;
+    }
+
+    public int getWins() {
+        return wins;
+    }
+
+    public int getLoses() {
+        return loses;
+    }
+
+    public void setWins(int wins) {
+        this.wins = wins;
+    }
+
+    public void setLoses(int loses) {
+        this.loses = loses;
     }
 
     public int Defense(double id) {
