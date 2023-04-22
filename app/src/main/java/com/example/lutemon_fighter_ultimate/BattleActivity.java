@@ -94,31 +94,30 @@ public class BattleActivity extends AppCompatActivity {
 
     public Lutemon generateEnemy(){
         int randomNumber = (int)(Math.random()*5)+1;
-        System.out.println(randomNumber);
         switch (randomNumber){
             case 1:
                 enemy = new White("Muumi");
-                enemy.trainLutemon((int)(Math.random()*7)+1);
+                enemy.trainLutemon((int)(Math.random()*5)+1);
                 break;
             case 2:
                 enemy = new Green("Pepe");
-                enemy.trainLutemon((int)(Math.random()*7)+1);
+                enemy.trainLutemon((int)(Math.random()*5)+1);
                 break;
             case 3:
                 enemy = new Pink("Pipsa");
-                enemy.trainLutemon((int)(Math.random()*7)+1);
+                enemy.trainLutemon((int)(Math.random()*5)+1);
                 break;
             case 4:
                 enemy = new Orange("Karvinen");
-                enemy.trainLutemon((int)(Math.random()*7)+1);
+                enemy.trainLutemon((int)(Math.random()*5)+1);
                 break;
             case 5:
                 enemy = new Black("Vader");
-                enemy.trainLutemon((int)(Math.random()*7)+1);
+                enemy.trainLutemon((int)(Math.random()*5)+1);
                 break;
 
         }
-        Storage.getInstance().addLutemon(enemy);
+
         return enemy;
     }
 
@@ -130,9 +129,9 @@ public class BattleActivity extends AppCompatActivity {
         int ownHealth = own.getHealth();
         int enemyHealth = enemy.getHealth();
         int ownAttack = own.Attack(own.getId());
-        int enemyAttack = enemy.Attack(own.getId());
+        int enemyAttack = enemy.getAttack() + enemy.getExperience();
         int ownDefense = own.Defense(own.getId());
-        int enemyDefense = enemy.Defense(enemy.getId());
+        int enemyDefense = enemy.getDefense() + enemy.getExperience();
 
 
         while (x == true){
@@ -143,14 +142,16 @@ public class BattleActivity extends AppCompatActivity {
 
             tv.append(String.valueOf(own.getName() + " iskee vihollista")+"\n");
             enemyHealth = enemyHealth - (ownAttack - enemyDefense);
+
             if(enemyHealth <= 0){
                 x = false;
                 tv.append(String.valueOf(enemy.getName() + " kuoli")+"\n");
             }
+
             if (x == true) {
                 tv.append(String.valueOf(enemy.getName() + " iskee takaisin") + "\n");
                 ownHealth = ownHealth - (enemyAttack - ownDefense);
-                if (enemyHealth <= 0) {
+                if (ownHealth <= 0) {
                     x = false;
                     tv.append(String.valueOf(own.getName() + " kuoli") + "\n");
                 }
@@ -162,7 +163,7 @@ public class BattleActivity extends AppCompatActivity {
 
         }
 
-    Storage.getInstance().deleteLutemon(enemy.getId());
+
     }
 
 }
