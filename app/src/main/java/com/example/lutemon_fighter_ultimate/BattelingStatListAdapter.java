@@ -27,7 +27,7 @@ public class BattelingStatListAdapter extends RecyclerView.Adapter<BattelingStat
 
     @Override
     public void onBindViewHolder(@NonNull BattelingStatViewHolder holder, int position) {
-        holder.lutemonName.setText(lutemons.get(position).getName() + "(" + lutemons.get(position).getColor() + ")");
+        holder.lutemonName.setText(lutemons.get(position).getName() + " (" + lutemons.get(position).getColor() + ")");
         holder.wins.setText("Voitot: "  + lutemons.get(position).getWins());
         holder.losses.setText("Häviöt: " + lutemons.get(position).getLoses());
         holder.lutemonPic.setImageResource(lutemons.get(position).getImage());

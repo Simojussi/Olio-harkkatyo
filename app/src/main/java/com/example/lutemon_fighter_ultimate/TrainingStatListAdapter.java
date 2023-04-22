@@ -28,7 +28,7 @@ public class TrainingStatListAdapter extends RecyclerView.Adapter<TrainingStatVi
     @Override
     public void onBindViewHolder(@NonNull TrainingStatViewHolder holder, int position) {
 
-        holder.lutemonName.setText(lutemons.get(position).getName() + "(" + lutemons.get(position).getColor() + ")");
+        holder.lutemonName.setText(lutemons.get(position).getName() + " (" + lutemons.get(position).getColor() + ")");
         holder.experience.setText("Kokemus: " + lutemons.get(position).getExperience());
         holder.trainingDays.setText("Treenipäivät: "+lutemons.get(position).getTrainingDays());
         holder.lutemonPic.setImageResource(lutemons.get(position).getImage());

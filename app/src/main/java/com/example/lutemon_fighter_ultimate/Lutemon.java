@@ -33,7 +33,7 @@ public class Lutemon implements Serializable {
         this.image = image;
         this.wins = wins;
         this.loses = loses;
-        trainingDays = 0;
+        this.trainingDays = 0;
     }
 
     public int Attack(double id) {
@@ -65,7 +65,7 @@ public class Lutemon implements Serializable {
     }
 
     public void addTrainingDays(){
-        trainingDays++;
+        this.trainingDays = trainingDays + 1;
     }
 
     public int Defense(double id) {
