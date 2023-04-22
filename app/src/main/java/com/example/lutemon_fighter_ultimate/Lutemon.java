@@ -52,12 +52,12 @@ public class Lutemon implements Serializable {
         return loses;
     }
 
-    public void setWins(int wins) {
-        this.wins = wins;
+    public void setWins() {
+        this.wins = wins+1;
     }
 
-    public void setLoses(int loses) {
-        this.loses = loses;
+    public void setLoses() {
+        this.loses = loses+1;
     }
 
     public int getTrainingDays(){
