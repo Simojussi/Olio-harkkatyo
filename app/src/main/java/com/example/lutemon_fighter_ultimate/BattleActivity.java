@@ -141,7 +141,7 @@ public class BattleActivity extends AppCompatActivity {
                     ", Puol: " + enemy.getDefense() + ", Elämä: " + enemyHealth + "/" + enemy.getMaxHealth() + ", XP: " + enemy.getExperience())+"\n");
 
             tv.append(String.valueOf(own.getName() + " iskee vihollista")+"\n");
-            enemyHealth = enemyHealth - (ownAttack - enemyDefense);
+            enemyHealth = enemyHealth - ((ownAttack + (int)(Math.random()*5)) - (enemyDefense + (int)(Math.random()*5)));
 
             if(enemyHealth <= 0){
                 x = false;
@@ -152,12 +152,12 @@ public class BattleActivity extends AppCompatActivity {
 
             if (x == true) {
                 tv.append(String.valueOf(enemy.getName() + " iskee takaisin") + "\n");
-                ownHealth = ownHealth - (enemyAttack - ownDefense);
+                ownHealth = ownHealth - ((enemyAttack + (int)(Math.random()*5)) - (ownDefense + (int)(Math.random()*5)));
                 if (ownHealth <= 0) {
                     x = false;
                     tv.append(String.valueOf(own.getName() + " kuoli") + "\n");
-                    int loses = own.getWins();
-                    own.setWins(loses++);
+                    int loses = own.getLoses();
+                    own.setLoses(loses++);
                 }
 
             }
