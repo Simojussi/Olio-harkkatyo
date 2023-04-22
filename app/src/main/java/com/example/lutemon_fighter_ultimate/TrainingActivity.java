@@ -90,6 +90,7 @@ public class TrainingActivity extends AppCompatActivity {
                 try {
                     Thread.sleep(5000);
                     chosen.trainLutemon(1);
+                    chosen.addTrainingDays();
                     Toast.makeText(this, chosen.getName() + " lopettaa juoksemisen", Toast.LENGTH_LONG).show();
                 }catch (InterruptedException e){
                     System.out.println("tapahtui virhe");
@@ -101,6 +102,7 @@ public class TrainingActivity extends AppCompatActivity {
                 try {
                 Thread.sleep(7000);
                 chosen.trainLutemon(2);
+                chosen.addTrainingDays();
                 Toast.makeText(this, chosen.getName() + " lopettaa parkouraamisen", Toast.LENGTH_LONG).show();
                 }catch (InterruptedException e){
                     System.out.println("tapahtui virhe");
@@ -111,6 +113,7 @@ public class TrainingActivity extends AppCompatActivity {
                 try {
                 Thread.sleep(10000);
                 chosen.trainLutemon(3);
+                chosen.addTrainingDays();
                 Toast.makeText(this, chosen.getName() + " lopettaa punnertamisen", Toast.LENGTH_LONG).show();
                 }catch (InterruptedException e){
                     System.out.println("tapahtui virhe");
@@ -121,6 +124,7 @@ public class TrainingActivity extends AppCompatActivity {
                 try {
                 Thread.sleep(15000);
                 chosen.trainLutemon(5);
+                chosen.addTrainingDays();
                 Toast.makeText(this, chosen.getName() + " lopettaa kyykkämisen", Toast.LENGTH_LONG).show();
                 }catch (InterruptedException e){
                     System.out.println("tapahtui virhe");
@@ -131,6 +135,7 @@ public class TrainingActivity extends AppCompatActivity {
                 try {
                 Thread.sleep(20000);
                 chosen.trainLutemon(7);
+                chosen.addTrainingDays();
                 Toast.makeText(this, chosen.getName() + " lopettaa nyrkkeilemisen", Toast.LENGTH_LONG).show();
                 }catch (InterruptedException e){
                     System.out.println("tapahtui virhe");

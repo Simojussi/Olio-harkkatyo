@@ -8,5 +8,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rwTrainingStats"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="#FFFF33"
+        android:layout_marginLeft="30dp"/>
 </FrameLayout>

@@ -18,11 +18,11 @@ public class TabPagerAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position){
             case 0:
-                return new BattelingStatsFragment();
-            case 1:
                 return new TrainingStatsFragment();
-            default:
+            case 1:
                 return new BattelingStatsFragment();
+            default:
+                return new TrainingStatsFragment();
         }
     }
 
