@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnStats"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFF33"
@@ -75,5 +76,18 @@
         app:layout_constraintEnd_toEndOf="@+id/btnToTrain"
         app:layout_constraintStart_toStartOf="@+id/btnToTrain"
         app:layout_constraintTop_toBottomOf="@+id/btnToTrain" />
+
+    <Button
+        android:id="@+id/btnToBattle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#AFAFAF"
+        android:onClick="toBattle"
+        android:text="Tilastot"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/btnToBattle"
+        app:layout_constraintStart_toStartOf="@+id/btnToBattle"
+        app:layout_constraintTop_toBottomOf="@+id/btnToBattle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
