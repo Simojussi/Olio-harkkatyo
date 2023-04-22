@@ -78,12 +78,12 @@
         app:layout_constraintTop_toBottomOf="@+id/btnToTrain" />
 
     <Button
-        android:id="@+id/btnToBattle2"
+        android:id="@+id/btnToStats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:backgroundTint="#AFAFAF"
-        android:onClick="toBattle"
+        android:onClick="toStats"
         android:text="Tilastot"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="@+id/btnToBattle"
