@@ -1,8 +1,9 @@
 package com.example.lutemon_fighter_ultimate;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Lutemon {
+public class Lutemon implements Serializable {
     protected String name;
     protected String color;
     protected int attack;
