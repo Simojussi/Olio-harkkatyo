@@ -3,6 +3,7 @@ package com.example.lutemon_fighter_ultimate;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -26,6 +27,7 @@ public class BattleActivity extends AppCompatActivity {
 
         rg = findViewById(R.id.rgChooseLutemon);
         tv = findViewById(R.id.tvBattleText);
+        tv.setMovementMethod(new ScrollingMovementMethod());
 
         lutemonsBattleList = Storage.getInstance().getLutemons();
 
@@ -91,21 +93,31 @@ public class BattleActivity extends AppCompatActivity {
     }
 
     public Lutemon generateEnemy(){
-        int randomNumber = new Random().nextInt(6-1) + 1;
+        int randomNumber = (int)(Math.random()*5)+1;
         switch (randomNumber){
             case 1:
                 enemy = new White("Muumi");
+                enemy.trainLutemon((int)(Math.random()*5)+1);
+                break;
             case 2:
                 enemy = new Green("Pepe");
+                enemy.trainLutemon((int)(Math.random()*5)+1);
+                break;
             case 3:
                 enemy = new Pink("Pipsa");
+                enemy.trainLutemon((int)(Math.random()*5)+1);
+                break;
             case 4:
                 enemy = new Orange("Karvinen");
+                enemy.trainLutemon((int)(Math.random()*5)+1);
+                break;
             case 5:
                 enemy = new Black("Vader");
-            default:
-                enemy = new Pink("Pipsa");
+                enemy.trainLutemon((int)(Math.random()*5)+1);
+                break;
+
         }
+
         return enemy;
     }
 
@@ -117,29 +129,34 @@ public class BattleActivity extends AppCompatActivity {
         int ownHealth = own.getHealth();
         int enemyHealth = enemy.getHealth();
         int ownAttack = own.Attack(own.getId());
-
+        int enemyAttack = enemy.getAttack() + enemy.getExperience();
+        int ownDefense = own.Defense(own.getId());
+        int enemyDefense = enemy.getDefense() + enemy.getExperience();
 
 
         while (x == true){
             tv.append(String.valueOf(i++ + ": " + own.getColor() + " " + own.getName() + ", Hyök: " + own.getAttack() +
                     ", Puol: " + own.getDefense() + ", Elämä: " + ownHealth + "/" + own.getMaxHealth() + ", XP: " + own.getExperience())+"\n");
-            tv.append(String.valueOf(i++ + ": " + enemy.getColor() + " " + enemy.getName() + ", Hyök: " + enemy.getAttack() +
+            tv.append(String.valueOf(i + ": " + enemy.getColor() + " " + enemy.getName() + ", Hyök: " + enemy.getAttack() +
                     ", Puol: " + enemy.getDefense() + ", Elämä: " + enemyHealth + "/" + enemy.getMaxHealth() + ", XP: " + enemy.getExperience())+"\n");
 
             tv.append(String.valueOf(own.getName() + " iskee vihollista")+"\n");
-            enemyHealth = enemyHealth - (own.attack - enemy.defense);
+            enemyHealth = enemyHealth - (ownAttack - enemyDefense);
+
             if(enemyHealth <= 0){
                 x = false;
                 tv.append(String.valueOf(enemy.getName() + " kuoli")+"\n");
             }
-            tv.append(String.valueOf(enemy.getName() + " iskee takaisin")+"\n");
-            ownHealth = ownHealth - (enemy.attack - own.defense);
-            if(enemyHealth <= 0){
-                x = false;
-                tv.append(String.valueOf(own.getName() + " kuoli")+"\n");
+
+            if (x == true) {
+                tv.append(String.valueOf(enemy.getName() + " iskee takaisin") + "\n");
+                ownHealth = ownHealth - (enemyAttack - ownDefense);
+                if (ownHealth <= 0) {
+                    x = false;
+                    tv.append(String.valueOf(own.getName() + " kuoli") + "\n");
+                }
+
             }
-
-
 
 
 
