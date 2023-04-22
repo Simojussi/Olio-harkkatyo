@@ -86,7 +86,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="158dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="159dp"
         android:backgroundTint="#AFAFAF"
         android:onClick="addLutemon"
@@ -97,60 +97,135 @@
         app:layout_constraintTop_toBottomOf="@+id/txtLutemonName" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageWhite"
         android:layout_width="90dp"
         android:layout_height="85dp"
         android:layout_marginTop="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageGreen"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/rgLutemonColors"
+        app:layout_constraintStart_toEndOf="@+id/txtWhiteStats"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/lutemon_white" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageGreen"
         android:layout_width="90dp"
         android:layout_height="85dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/imagePink"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toEndOf="@+id/rgLutemonColors"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/txtGreenStats"
+        app:layout_constraintTop_toBottomOf="@+id/imageWhite"
         app:srcCompat="@drawable/lutemoni_green" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imagePink"
         android:layout_width="90dp"
         android:layout_height="85dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageOrange"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toEndOf="@+id/rgLutemonColors"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/txtPinkStats"
+        app:layout_constraintTop_toBottomOf="@+id/imageGreen"
         app:srcCompat="@drawable/lutemon_pink" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageOrange"
         android:layout_width="90dp"
         android:layout_height="85dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageBlack"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/rgLutemonColors"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/txtOrangeStats"
+        app:layout_constraintTop_toBottomOf="@+id/imagePink"
         app:srcCompat="@drawable/lutemon_orange" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/imageBlack"
         android:layout_width="90dp"
         android:layout_height="85dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/txtLutemonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/rgLutemonColors"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/txtBlackStats"
+        app:layout_constraintTop_toBottomOf="@+id/imageOrange"
         app:srcCompat="@drawable/lutemon_black" />
+
+    <TextView
+        android:id="@+id/txtWhiteStats"
+        android:layout_width="115dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="9dp"
+        android:text="TextView"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/txtGreenStats"
+        app:layout_constraintEnd_toStartOf="@+id/imageWhite"
+        app:layout_constraintStart_toEndOf="@+id/rgLutemonColors"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/txtGreenStats"
+        android:layout_width="115dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="9dp"
+        android:text="TextView"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/txtPinkStats"
+        app:layout_constraintEnd_toStartOf="@+id/imageGreen"
+        app:layout_constraintStart_toEndOf="@+id/rgLutemonColors"
+        app:layout_constraintTop_toBottomOf="@+id/txtWhiteStats" />
+
+    <TextView
+        android:id="@+id/txtPinkStats"
+        android:layout_width="115dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="9dp"
+        android:text="TextView"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/txtOrangeStats"
+        app:layout_constraintEnd_toStartOf="@+id/imagePink"
+        app:layout_constraintStart_toEndOf="@+id/rgLutemonColors"
+        app:layout_constraintTop_toBottomOf="@+id/txtGreenStats" />
+
+    <TextView
+        android:id="@+id/txtBlackStats"
+        android:layout_width="115dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="20dp"
+        android:text="TextView"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/txtLutemonName"
+        app:layout_constraintEnd_toStartOf="@+id/imageBlack"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/rgLutemonColors"
+        app:layout_constraintTop_toBottomOf="@+id/txtOrangeStats" />
+
+    <TextView
+        android:id="@+id/txtOrangeStats"
+        android:layout_width="115dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="9dp"
+        android:text="TextView"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/txtBlackStats"
+        app:layout_constraintEnd_toStartOf="@+id/imageOrange"
+        app:layout_constraintStart_toEndOf="@+id/rgLutemonColors"
+        app:layout_constraintTop_toBottomOf="@+id/txtPinkStats" />
 </androidx.constraintlayout.widget.ConstraintLayout>
