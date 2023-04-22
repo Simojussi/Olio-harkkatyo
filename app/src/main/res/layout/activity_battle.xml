@@ -90,8 +90,8 @@
 
     <TextView
         android:id="@+id/tvBattleText"
-        android:layout_width="366dp"
-        android:layout_height="210dp"
+        android:layout_width="372dp"
+        android:layout_height="291dp"
         android:layout_marginTop="20dp"
         android:inputType="textMultiLine"
         android:isScrollContainer="true"
