@@ -146,6 +146,8 @@ public class BattleActivity extends AppCompatActivity {
             if(enemyHealth <= 0){
                 x = false;
                 tv.append(String.valueOf(enemy.getName() + " kuoli")+"\n");
+                int wins = own.getWins();
+                own.setWins(wins++);
             }
 
             if (x == true) {
@@ -154,6 +156,8 @@ public class BattleActivity extends AppCompatActivity {
                 if (ownHealth <= 0) {
                     x = false;
                     tv.append(String.valueOf(own.getName() + " kuoli") + "\n");
+                    int loses = own.getWins();
+                    own.setWins(loses++);
                 }
 
             }
