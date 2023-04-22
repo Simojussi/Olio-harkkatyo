@@ -83,6 +83,7 @@ public class HomeActivity extends AppCompatActivity {
                 throw new IllegalStateException("Unexpected value: " + rgLutemonColors.getCheckedRadioButtonId());
 
         }
+    Storage.getInstance().saveLutemons(this);
 
     }
 
