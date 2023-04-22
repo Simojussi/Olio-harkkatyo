@@ -41,11 +41,11 @@ public class HomeActivity extends AppCompatActivity {
         txtOrangeStats = findViewById(R.id.txtOrangeStats);
         txtBlackStats  = findViewById(R.id.txtBlackStats);
 
-        txtWhiteStats.setText("Hyökkäys: 5 /n" + "Puolustus: 4 /n" + "Elämä: 20");
-        txtGreenStats.setText("Hyökkäys: 9 /n" + "Puolustus: 6 /n" + "Elämä: 19");
-        txtPinkStats.setText("Hyökkäys: 7 /n" + "Puolustus: 2 /n" + "Elämä: 17");
-        txtOrangeStats.setText("Hyökkäys: 8 /n" + "Puolustus: 1 /n" + "Elämä: 17");
-        txtBlackStats.setText("Hyökkäys: 9 /n" + "Puolustus: 0 /n" + "Elämä: 16");
+        txtWhiteStats.setText("Hyökkäys: 5 \n" + "Puolustus: 4 \n" + "Elämä: 20");
+        txtGreenStats.setText("Hyökkäys: 9 \n" + "Puolustus: 6 \n" + "Elämä: 19");
+        txtPinkStats.setText("Hyökkäys: 7 \n" + "Puolustus: 2 \n" + "Elämä: 17");
+        txtOrangeStats.setText("Hyökkäys: 8 \n" + "Puolustus: 1 \n" + "Elämä: 17");
+        txtBlackStats.setText("Hyökkäys: 9 \n" + "Puolustus: 0 \n" + "Elämä: 16");
 
 
     }
