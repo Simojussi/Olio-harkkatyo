@@ -40,8 +40,9 @@ public class LutemonListAdapter extends RecyclerView.Adapter<LutemonViewHolder> 
         holder.toTrain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                hs.moveLutemonToTrain(holder.getAdapterPosition());
+                Lutemon l  = lutemons.get(holder.getAdapterPosition());
+                System.out.println(l.getName());
+                hs.moveLutemonToTrain(l.getId());
                 notifyItemRemoved(holder.getAdapterPosition());
             }
         });
