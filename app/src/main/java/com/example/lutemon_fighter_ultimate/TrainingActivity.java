@@ -27,7 +27,7 @@ public class TrainingActivity extends AppCompatActivity {
 
         rgChooseTrainingMethod = findViewById(R.id.rgChooseTrainingMethod);
 
-        myLutemons = Storage.getInstance().getLutemons();
+        myLutemons = TrainingStorage.getInstance().getLutemons();
 
         for(int i = 0;i < myLutemons.size(); i++){
             RadioButton radioButton = new RadioButton(this);

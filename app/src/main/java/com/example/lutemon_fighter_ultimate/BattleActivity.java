@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -31,64 +32,28 @@ public class BattleActivity extends AppCompatActivity {
 
         lutemonsBattleList = BattleStorage.getInstance().getLutemons();
 
+        for(int i = 0;i < lutemonsBattleList.size(); i++){
+            RadioButton radioButton = new RadioButton(this);
+            radioButton.setText(lutemonsBattleList.get(i).getName() + " (" + lutemonsBattleList.get(i).getColor() + ")");
+            radioButton.setId(i);
+            rg.addView(radioButton);
+        }
+
+        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                int checkedRBId = rg.getCheckedRadioButtonId();
+                RadioButton radioBtn = (RadioButton) findViewById(checkedRBId);
+
+            }
+        });
+
     }
 
     public Lutemon chooseLutemon(){
 
+        battlingLutemon = lutemonsBattleList.get(rg.getCheckedRadioButtonId());
 
-
-        switch (rg.getCheckedRadioButtonId()){
-
-
-            case R.id.rbWhite:
-
-                for (Lutemon l: lutemonsBattleList) {
-                    if (l instanceof White){
-                        battlingLutemon = l;
-                        break;
-                    }
-                }
-                break;
-            case R.id.rbPink:
-
-                for (Lutemon l: lutemonsBattleList) {
-                    if (l instanceof Pink){
-                        battlingLutemon = l;
-                        break;
-                    }
-                }
-                break;
-            case R.id.rbGreen:
-
-                for (Lutemon l: lutemonsBattleList) {
-                    if (l instanceof Green){
-                        battlingLutemon = l;
-                        break;
-                    }
-                }
-                break;
-            case R.id.rbOrange:
-
-                for (Lutemon l: lutemonsBattleList) {
-                    if (l instanceof Orange){
-                        battlingLutemon = l;
-                        break;
-                    }
-                }
-                break;
-            case R.id.rbBlack:
-
-                for (Lutemon l: lutemonsBattleList) {
-                    if (l instanceof Black){
-                        battlingLutemon = l;
-                        break;
-                    }
-                }
-                break;
-            default:
-                throw new IllegalStateException("Unexpected value: " + rg.getCheckedRadioButtonId());
-
-        }
         return battlingLutemon;
     }
 
