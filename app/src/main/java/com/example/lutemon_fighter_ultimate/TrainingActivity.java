@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -26,7 +27,14 @@ public class TrainingActivity extends AppCompatActivity {
 
         rgChooseTrainingMethod = findViewById(R.id.rgChooseTrainingMethod);
 
-        myLutemons = TrainingStorage.getInstance().getLutemons();
+        myLutemons = Storage.getInstance().getLutemons();
+
+        for(int i = 0;i < myLutemons.size(); i++){
+            RadioButton radioButton = new RadioButton(this);
+            radioButton.setText(myLutemons.get(i).getName() + " (" + myLutemons.get(i).getColor() + ")");
+            radioButton.setId(i);
+            rgChooseLutemon.addView(radioButton);
+        }
     }
 
     private Lutemon chooseLutemonToTrain(){
