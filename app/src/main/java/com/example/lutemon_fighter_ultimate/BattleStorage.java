@@ -14,7 +14,7 @@ public class BattleStorage extends Storage{
     }
 
     public void returnHome(double id){
-        ArrayList<Lutemon> lutemons = HomeStorage.getInstance().getLutemons();
+        ArrayList<Lutemon> lutemons = BattleStorage.getInstance().getLutemons();
         Lutemon lutemon = null;
         for (Lutemon l : lutemons) {
             if (l.getId() == id){

@@ -138,6 +138,7 @@ public class BattleActivity extends AppCompatActivity {
 
     public void returnHome(View view){
         BattleStorage.getInstance().returnHome(chooseLutemon().getId());
+        lutemonsBattleList.remove(chooseLutemon());
     }
 
 

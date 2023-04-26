@@ -74,14 +74,16 @@ public class Lutemon implements Serializable {
         return defence;
     }
 
-    public Lutemon getLutemonById(double id){
-        ArrayList<Lutemon> lutemons = HomeStorage.getInstance().getLutemons();
+    public Lutemon getLutemonById(double id) {
+        ArrayList<Lutemon> lutemons = BattleStorage.getInstance().getLutemons();
         Lutemon lutemon = null;
         for (Lutemon l : lutemons) {
-            if (l.getId() == id){
+            if (l.getId() == id) {
                 lutemon = l;
+
                 break;
             }
+
         }
         return lutemon;
     }

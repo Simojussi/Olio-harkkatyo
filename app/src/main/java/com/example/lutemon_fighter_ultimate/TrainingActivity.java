@@ -118,4 +118,8 @@ public class TrainingActivity extends AppCompatActivity {
                 throw new IllegalStateException("Unexpected value: " + rgChooseTrainingMethod.getCheckedRadioButtonId());
         }
     }
+
+    public void returnHome(View view){
+        TrainingStorage.getInstance().returnHome(chooseLutemonToTrain().getId());
+    }
 }
