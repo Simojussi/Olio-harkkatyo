@@ -26,7 +26,7 @@ public class TrainingActivity extends AppCompatActivity {
 
         rgChooseTrainingMethod = findViewById(R.id.rgChooseTrainingMethod);
 
-        myLutemons = Storage.getInstance().getLutemons();
+        myLutemons = TrainingStorage.getInstance().getLutemons();
     }
 
     private Lutemon chooseLutemonToTrain(){
