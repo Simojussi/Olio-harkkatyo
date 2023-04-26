@@ -12,7 +12,7 @@ public class Lutemon implements Serializable {
     protected int health;
     protected int maxHealth;
     protected double id;
-    private int idCounter;
+
     protected int image;
     protected int wins;
     protected int loses;
@@ -28,8 +28,6 @@ public class Lutemon implements Serializable {
         this.health = health;
         this.maxHealth = maxHealth;
         id = Math.random()*1000+100;
-        int i = 0;
-        idCounter = i++;
         this.image = image;
         this.wins = wins;
         this.loses = loses;
@@ -77,7 +75,7 @@ public class Lutemon implements Serializable {
     }
 
     public Lutemon getLutemonById(double id){
-        ArrayList<Lutemon> lutemons = Storage.getInstance().getLutemons();
+        ArrayList<Lutemon> lutemons = HomeStorage.getInstance().getLutemons();
         Lutemon lutemon = null;
         for (Lutemon l : lutemons) {
             if (l.getId() == id){
@@ -124,9 +122,7 @@ public class Lutemon implements Serializable {
         return id;
     }
 
-    public int getIdCounter() {
-        return idCounter;
-    }
+
 
     public int getImage() {
         return image;

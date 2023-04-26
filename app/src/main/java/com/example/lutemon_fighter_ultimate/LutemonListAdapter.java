@@ -16,6 +16,7 @@ public class LutemonListAdapter extends RecyclerView.Adapter<LutemonViewHolder> 
     private ArrayList<Lutemon> lutemons = new ArrayList<>();
 
 
+
     private HomeStorage hs;
     public LutemonListAdapter(Context context, ArrayList<Lutemon> lutemons) {
         this.context = context;
@@ -30,7 +31,7 @@ public class LutemonListAdapter extends RecyclerView.Adapter<LutemonViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull LutemonViewHolder holder, int position) {
-
+        hs = HomeStorage.getInstance();
         holder.txtName.setText(lutemons.get(position).getName() + " (" + lutemons.get(position).getColor() + ")");
         holder.txtAttack.setText("Hyökkäys: " + lutemons.get(position).getAttack());
         holder.txtDefence.setText("Puolustus: " + lutemons.get(position).getDefense());
@@ -42,9 +43,7 @@ public class LutemonListAdapter extends RecyclerView.Adapter<LutemonViewHolder> 
         holder.toTrain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Lutemon l  = lutemons.get(holder.getAdapterPosition());
-                System.out.println(l.getName());
-                hs.moveLutemonToTrain(l.getId());
+                hs.moveLutemonToBattle(holder.getAdapterPosition());
                 notifyItemRemoved(holder.getAdapterPosition());
             }
         });
