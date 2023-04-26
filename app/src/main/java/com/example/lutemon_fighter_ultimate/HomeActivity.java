@@ -28,10 +28,10 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        RadioGroup rgLutemonColors = findViewById(R.id.rgLutemonColors);
-        Button btnAddNew = findViewById(R.id.btnAddNew);
 
-        Storage storage = Storage.getInstance();
+
+
+
         context = this;
 
         txtLutemonName = findViewById(R.id.txtLutemonName);
@@ -56,34 +56,34 @@ public class HomeActivity extends AppCompatActivity {
         switch (rgLutemonColors.getCheckedRadioButtonId()) {
             case R.id.rbAddWhite:
                 Lutemon white = new White(txtLutemonName.getText().toString());
-                Storage.getInstance().addLutemon(white);
+                HomeStorage.getInstance().addLutemon(white);
                 break;
 
             case R.id.rbAddGreen:
                 Lutemon green = new Green(txtLutemonName.getText().toString());
-                Storage.getInstance().addLutemon(green);
+                HomeStorage.getInstance().addLutemon(green);
                 break;
 
             case R.id.rbAddPink:
                 Lutemon pink = new Pink(txtLutemonName.getText().toString());
-                Storage.getInstance().addLutemon(pink);
+                HomeStorage.getInstance().addLutemon(pink);
                 break;
 
             case R.id.rbAddOrange:
                 Lutemon orange = new Orange(txtLutemonName.getText().toString());
-                Storage.getInstance().addLutemon(orange);
+                HomeStorage.getInstance().addLutemon(orange);
                 break;
 
             case R.id.rbAddBlack:
                 Lutemon black = new Black(txtLutemonName.getText().toString());
-                Storage.getInstance().addLutemon(black);
+                HomeStorage.getInstance().addLutemon(black);
                 break;
 
             default:
                 throw new IllegalStateException("Unexpected value: " + rgLutemonColors.getCheckedRadioButtonId());
 
         }
-    Storage.getInstance().saveLutemons(this);
+    HomeStorage.getInstance().saveLutemons(this);
 
     }
 

@@ -10,10 +10,10 @@ import java.util.ArrayList;
 
 public class Storage {
 
-    private static Storage storage = null;
-    ArrayList<Lutemon> lutemons = new ArrayList<>();
+    protected static Storage storage = null;
+    protected ArrayList<Lutemon> lutemons = new ArrayList<>();
 
-    private Storage(){
+    protected Storage(){
 
     }
 
@@ -33,16 +33,15 @@ public class Storage {
     }
 
     public void deleteLutemon(double id){
-        Lutemon lutemon = null;
-        for (Lutemon l : lutemons) {
-            if (l.getId() == id){
-                lutemons.remove(l);
+        Lutemon l = null;
+        l = l.getLutemonById(id);
+        lutemons.remove(l);
 
-                break;
-            }
-        }
+
 
     }
+
+
 
     public void saveLutemons(Context context) {
         try {

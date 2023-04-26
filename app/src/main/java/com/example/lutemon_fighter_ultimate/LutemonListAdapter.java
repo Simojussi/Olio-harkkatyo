@@ -2,6 +2,7 @@ package com.example.lutemon_fighter_ultimate;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -14,6 +15,8 @@ public class LutemonListAdapter extends RecyclerView.Adapter<LutemonViewHolder> 
     private Context context;
     private ArrayList<Lutemon> lutemons = new ArrayList<>();
 
+
+    private HomeStorage hs;
     public LutemonListAdapter(Context context, ArrayList<Lutemon> lutemons) {
         this.context = context;
         this.lutemons = lutemons;
@@ -34,6 +37,23 @@ public class LutemonListAdapter extends RecyclerView.Adapter<LutemonViewHolder> 
         holder.txtHealth.setText("Elämä: " + lutemons.get(position).getHealth() + "/" + lutemons.get(position).getMaxHealth());
         holder.txtExperience.setText("Kokemus: " + lutemons.get(position).getExperience());
         holder.lutemonPic.setImageResource(lutemons.get(position).getImage());
+        holder.toTrain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                hs.moveLutemonToTrain(holder.getAdapterPosition());
+                notifyItemRemoved(holder.getAdapterPosition());
+            }
+        });
+
+        holder.toBattle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                hs.moveLutemonToBattle(holder.getAdapterPosition());
+                notifyItemRemoved(holder.getAdapterPosition());
+            }
+        });
 
     }
 

@@ -29,7 +29,7 @@ public class BattleActivity extends AppCompatActivity {
         tv = findViewById(R.id.tvBattleText);
         tv.setMovementMethod(new ScrollingMovementMethod());
 
-        lutemonsBattleList = Storage.getInstance().getLutemons();
+        lutemonsBattleList = BattleStorage.getInstance().getLutemons();
 
     }
 
@@ -97,23 +97,23 @@ public class BattleActivity extends AppCompatActivity {
         switch (randomNumber){
             case 1:
                 enemy = new White("Muumi");
-                enemy.trainLutemon((int)(Math.random()*5)+1);
+                enemy.trainLutemon((int)(Math.random()*10)+1);
                 break;
             case 2:
                 enemy = new Green("Pepe");
-                enemy.trainLutemon((int)(Math.random()*5)+1);
+                enemy.trainLutemon((int)(Math.random()*10)+1);
                 break;
             case 3:
                 enemy = new Pink("Pipsa");
-                enemy.trainLutemon((int)(Math.random()*5)+1);
+                enemy.trainLutemon((int)(Math.random()*10)+1);
                 break;
             case 4:
                 enemy = new Orange("Karvinen");
-                enemy.trainLutemon((int)(Math.random()*5)+1);
+                enemy.trainLutemon((int)(Math.random()*10)+1);
                 break;
             case 5:
                 enemy = new Black("Vader");
-                enemy.trainLutemon((int)(Math.random()*5)+1);
+                enemy.trainLutemon((int)(Math.random()*10)+1);
                 break;
 
         }
