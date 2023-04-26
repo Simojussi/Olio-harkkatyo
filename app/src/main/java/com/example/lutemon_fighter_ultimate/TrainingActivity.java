@@ -121,5 +121,6 @@ public class TrainingActivity extends AppCompatActivity {
 
     public void returnHome(View view){
         TrainingStorage.getInstance().returnHome(chooseLutemonToTrain().getId());
+
     }
 }

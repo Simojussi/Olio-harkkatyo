@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void loadLutemons(View view) {
-        Storage.getInstance().loadLutemons(this);
+        HomeStorage.getInstance().loadLutemons(this);
     }
     public void toHome(View view){
         Intent intent = new Intent(this, HomeActivity.class);
