@@ -32,11 +32,8 @@ public class Storage {
         lutemons.add(lutemon);
     }
 
-    public void deleteLutemon(double id){
-        Lutemon l = null;
-        l = l.getLutemonById(id);
-        lutemons.remove(l);
-
+    public void deleteLutemon(int id){
+        lutemons.remove(id);
     }
 
 

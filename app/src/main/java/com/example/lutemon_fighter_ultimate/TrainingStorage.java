@@ -10,11 +10,9 @@ public class TrainingStorage extends Storage{
         }
         return trainingStorage;
     }
-    public void returnHome(double id){
-        Lutemon lutemon = null;
-        lutemon = lutemon.getLutemonById(id);
-        HomeStorage.getInstance().addLutemon(lutemon);
-        TrainingStorage.getInstance().deleteLutemon(id);
+    public void returnHome(int i){
+        HomeStorage.getInstance().addLutemon(lutemons.get(i));
+        TrainingStorage.getInstance().deleteLutemon(i);
     }
 
 
