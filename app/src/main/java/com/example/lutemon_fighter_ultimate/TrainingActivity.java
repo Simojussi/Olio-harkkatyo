@@ -35,57 +35,21 @@ public class TrainingActivity extends AppCompatActivity {
             radioButton.setId(i);
             rgChooseLutemon.addView(radioButton);
         }
+
+        rgChooseLutemon.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                int checkedRBId = rgChooseLutemon.getCheckedRadioButtonId();
+                RadioButton radioBtn = (RadioButton) findViewById(checkedRBId);
+
+            }
+        });
     }
 
     private Lutemon chooseLutemonToTrain(){
-        switch(rgChooseLutemon.getCheckedRadioButtonId()){
-            case R.id.rbBlack:
-                for (Lutemon choice:myLutemons){
-                    if(choice instanceof Black){
-                        chosenLutemon = choice;
-                        break;
-                    }
-                }
-                break;
 
-            case R.id.rbOrange:
-                for (Lutemon choice:myLutemons){
-                    if(choice instanceof Orange){
-                        chosenLutemon = choice;
-                        break;
-                    }
-                }
-                break;
-            case R.id.rbGreen:
-                for (Lutemon choice:myLutemons){
-                    if(choice instanceof Green){
-                        chosenLutemon = choice;
-                        break;
-                    }
-                }
-                break;
+        chosenLutemon = myLutemons.get(rgChooseLutemon.getCheckedRadioButtonId());
 
-            case R.id.rbPink:
-                for (Lutemon choice:myLutemons){
-                    if(choice instanceof Pink){
-                        chosenLutemon = choice;
-                        break;
-                    }
-                }
-                break;
-
-            case R.id.rbWhite:
-                for (Lutemon choice:myLutemons){
-                    if(choice instanceof White){
-                        chosenLutemon = choice;
-                        break;
-                    }
-                }
-                break;
-
-            default:
-                throw new IllegalStateException("Unexpected value: " + rgChooseLutemon.getCheckedRadioButtonId());
-        }
         return chosenLutemon;
     }
 
