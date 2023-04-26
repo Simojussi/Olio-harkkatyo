@@ -111,7 +111,7 @@ public class BattleActivity extends AppCompatActivity {
 
             if(enemyHealth <= 0){
                 x = false;
-                tv.append(String.valueOf(enemy.getName() + " kuoli")+"\n");
+                tv.append(String.valueOf(enemy.getName() + " hävisi")+"\n");
                 int wins = own.getWins();
                 own.setWins();
             }
@@ -121,7 +121,7 @@ public class BattleActivity extends AppCompatActivity {
                 ownHealth = ownHealth - ((enemyAttack + (int)(Math.random()*5)) - (ownDefense) + (int)(Math.random()*2));
                 if (ownHealth <= 0) {
                     x = false;
-                    tv.append(String.valueOf(own.getName() + " kuoli") + "\n");
+                    tv.append(String.valueOf(own.getName() + " hävisi") + "\n");
                     int loses = own.getLoses();
                     own.setLoses();
                 }
