@@ -12,12 +12,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.lutemon_fighter_ultimate.BattelingStatListAdapter;
+import com.example.lutemon_fighter_ultimate.HomeStorage;
 import com.example.lutemon_fighter_ultimate.R;
 import com.example.lutemon_fighter_ultimate.Storage;
 
 public class BattelingStatsFragment extends Fragment {
 
-    private Storage storage;
+    private HomeStorage storage;
     private RecyclerView recyclerView;
     private Context context;
 
@@ -38,7 +39,7 @@ public class BattelingStatsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_batteling_stats, container, false);
 
-        storage = Storage.getInstance();
+        storage = HomeStorage.getInstance();
 
         recyclerView = view.findViewById(R.id.rwBattelingStats);
 
