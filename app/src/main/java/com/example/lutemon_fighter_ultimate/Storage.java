@@ -37,8 +37,6 @@ public class Storage {
         l = l.getLutemonById(id);
         lutemons.remove(l);
 
-
-
     }
 
 
