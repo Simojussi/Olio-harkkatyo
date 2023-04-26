@@ -18,7 +18,7 @@ public class HomeStorage extends Storage{
     }
 
     public void moveLutemonToTrain(int i) {
-        BattleStorage.getInstance().addLutemon(lutemons.get(i));
+        TrainingStorage.getInstance().addLutemon(lutemons.get(i));
         HomeStorage.getInstance().deleteLutemon(i);
     }
 

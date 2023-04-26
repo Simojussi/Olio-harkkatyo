@@ -136,7 +136,7 @@ public class BattleActivity extends AppCompatActivity {
 
     }
 
-    public void returnHome(){
+    public void returnHome(View view){
         BattleStorage.getInstance().returnHome(chooseLutemon().getId());
     }
 
