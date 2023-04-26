@@ -1,5 +1,7 @@
 package com.example.lutemon_fighter_ultimate;
 
+import java.util.ArrayList;
+
 public class BattleStorage extends Storage{
 
     protected static BattleStorage battleStorage = null;
@@ -11,9 +13,18 @@ public class BattleStorage extends Storage{
         return battleStorage;
     }
 
-    public void returnHome(int i){
-        HomeStorage.getInstance().addLutemon(lutemons.get(i));
-        BattleStorage.getInstance().deleteLutemon(i);
+    public void returnHome(double id){
+        ArrayList<Lutemon> lutemons = HomeStorage.getInstance().getLutemons();
+        Lutemon lutemon = null;
+        for (Lutemon l : lutemons) {
+            if (l.getId() == id){
+                lutemon = l;
+                HomeStorage.getInstance().addLutemon(l);
+                lutemons.remove(l);
+                break;
+            }
+        }
+
     }
 
 

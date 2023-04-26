@@ -171,4 +171,9 @@ public class BattleActivity extends AppCompatActivity {
 
     }
 
+    public void returnHome(){
+        BattleStorage.getInstance().returnHome(chooseLutemon().getId());
+    }
+
+
 }
